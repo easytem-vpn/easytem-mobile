@@ -42,6 +42,6 @@ class _CountDownTimerState extends State<CountDownTimer> {
     final seconds = twoDigit(_duration.inSeconds.remainder(60));
     final hours = twoDigit(_duration.inHours.remainder(60));
 
-    return Text('$hours:$minutes:$seconds', style: const TextStyle(fontSize: 22));
+    return Text('$hours:$minutes:$seconds', style: const TextStyle(fontSize: 18));
   }
 }

@@ -80,7 +80,7 @@ class HomeScreen extends StatelessWidget {
                     HomeCard(
                         title: _formatBytes(snapshot.data?.byteIn ?? '0'),
                         icon: const Icon(Icons.arrow_downward,
-                              size: 38, color: Colors.greenAccent),
+                              size: 36, color: Colors.greenAccent),
                         rtl: true,
                         ),
 
@@ -88,7 +88,7 @@ class HomeScreen extends StatelessWidget {
                     HomeCard(
                         title: _formatBytes(snapshot.data?.byteOut ?? '0'),
                         icon: const Icon(Icons.arrow_upward,
-                              size: 38, color: Colors.redAccent),
+                              size: 36, color: Colors.redAccent),
                         ),
                   ],
                 ),
@@ -168,19 +168,19 @@ class HomeScreen extends StatelessWidget {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        const SizedBox(height: 4),
+                        const SizedBox(height: 6),
                         //icon
                         Obx(() => CountDownTimer(
                                   startTimer:
                                   _controller.vpnState.value == VpnEngine.vpnConnected)),
 
-                        const SizedBox(height: 2),
+                        const SizedBox(height: 1),
 
                         //text
                         Text(
                           _controller.getButtonText,
                           style: const TextStyle(
-                              fontSize: 25,
+                              fontSize: 18,
                               color: Colors.white,
                               fontWeight: FontWeight.w500),
                         )
@@ -193,6 +193,7 @@ class HomeScreen extends StatelessWidget {
           ),
 
         Container(
+            margin: const EdgeInsets.only(top: 3),
             decoration: const BoxDecoration(
                 color: Color.fromARGB(255, 3, 32, 48)),
             child: Text(
