@@ -3,7 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:get/route_manager.dart';
 
 import '../main.dart';
-import 'home_screen.dart';
+import 'auth_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -21,7 +21,7 @@ class _SplashScreenState extends State<SplashScreen> {
       SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
 
       //navigate to home
-      Get.off(() => HomeScreen());
+      Get.off(() => LoginScreen());
       // Navigator.pushReplacement(
       //     context, MaterialPageRoute(builder: (_) => HomeScreen()));
     });

@@ -120,7 +120,7 @@ class HomeScreen extends StatelessWidget {
               //country flag
               RoundedBox(
                   country: _controller.vpn.value.countryLong.isEmpty
-                      ? 'Country'
+                      ? 'Change Location'
                       : _controller.vpn.value.countryLong,
 
                   icon: _controller.vpn.value.countryShort.isEmpty

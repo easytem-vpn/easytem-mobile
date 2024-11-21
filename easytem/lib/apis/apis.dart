@@ -46,19 +46,19 @@ class APIs {
     final List<Vpn> vpnList = [];
 
     String ovpnScript = await rootBundle.loadString('assets/vpn/UK.ovpn');
-    vpnList.add(Vpn(countryLong: 'UK', countryShort: 'gb', username: "freeopenvpn", password: "981978783", openVPNConfigDataBase64: ovpnScript));
+    vpnList.add(Vpn(countryLong: 'UK', countryShort: 'gb', username: "freeopenvpn", password: "402085862", openVPNConfigDataBase64: ovpnScript));
 
     ovpnScript = await rootBundle.loadString('assets/vpn/Germany.ovpn');
-    vpnList.add(Vpn(countryLong: 'Germany', countryShort: 'de', username: "freeopenvpn", password: "377755853", openVPNConfigDataBase64: ovpnScript));
+    vpnList.add(Vpn(countryLong: 'Germany', countryShort: 'de', username: "freeopenvpn", password: "264160818", openVPNConfigDataBase64: ovpnScript));
     
     ovpnScript = await rootBundle.loadString('assets/vpn/Italy.ovpn');
-    vpnList.add(Vpn(countryLong: 'Italy', countryShort: 'it', username: "freeopenvpn", password: "836916878", openVPNConfigDataBase64: ovpnScript));
+    vpnList.add(Vpn(countryLong: 'Italy', countryShort: 'it', username: "freeopenvpn", password: "681414237", openVPNConfigDataBase64: ovpnScript));
 
     ovpnScript = await rootBundle.loadString('assets/vpn/Turkey.ovpn');
-    vpnList.add(Vpn(countryLong: 'Turkey', countryShort: 'tr', username: "freeopenvpn", password: "903355068", openVPNConfigDataBase64: ovpnScript));
+    vpnList.add(Vpn(countryLong: 'Turkey', countryShort: 'tr', username: "freeopenvpn", password: "639624727", openVPNConfigDataBase64: ovpnScript));
 
     ovpnScript = await rootBundle.loadString('assets/vpn/USA.ovpn');
-    vpnList.add(Vpn(countryLong: 'USA', countryShort: 'us', username: "freeopenvpn", password: "834589613", openVPNConfigDataBase64: ovpnScript));
+    vpnList.add(Vpn(countryLong: 'USA', countryShort: 'us', username: "freeopenvpn", password: "772012326", openVPNConfigDataBase64: ovpnScript));
 
     return vpnList;
   }
