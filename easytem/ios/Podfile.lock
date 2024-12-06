@@ -1,45 +1,120 @@
 PODS:
+  - AppAuth (1.7.6):
+    - AppAuth/Core (= 1.7.6)
+    - AppAuth/ExternalUserAgent (= 1.7.6)
+  - AppAuth/Core (1.7.6)
+  - AppAuth/ExternalUserAgent (1.7.6):
+    - AppAuth/Core
+  - FBAEMKit (17.1.0):
+    - FBSDKCoreKit_Basics (= 17.1.0)
+  - FBSDKCoreKit (17.1.0):
+    - FBAEMKit (= 17.1.0)
+    - FBSDKCoreKit_Basics (= 17.1.0)
+  - FBSDKCoreKit_Basics (17.1.0)
+  - FBSDKLoginKit (17.1.0):
+    - FBSDKCoreKit (= 17.1.0)
   - Flutter (1.0.0)
+  - flutter_facebook_auth (7.1.1):
+    - FBSDKLoginKit (~> 17.1.0)
+    - Flutter
+  - flutter_secure_storage (6.0.0):
+    - Flutter
+  - google_sign_in_ios (0.0.1):
+    - AppAuth (>= 1.7.4)
+    - Flutter
+    - FlutterMacOS
+    - GoogleSignIn (~> 7.1)
+    - GTMSessionFetcher (>= 3.4.0)
+  - GoogleSignIn (7.1.0):
+    - AppAuth (< 2.0, >= 1.7.3)
+    - GTMAppAuth (< 5.0, >= 4.1.1)
+    - GTMSessionFetcher/Core (~> 3.3)
+  - GTMAppAuth (4.1.1):
+    - AppAuth/Core (~> 1.7)
+    - GTMSessionFetcher/Core (< 4.0, >= 3.3)
+  - GTMSessionFetcher (3.5.0):
+    - GTMSessionFetcher/Full (= 3.5.0)
+  - GTMSessionFetcher/Core (3.5.0)
+  - GTMSessionFetcher/Full (3.5.0):
+    - GTMSessionFetcher/Core
   - openvpn_flutter (0.0.1):
     - Flutter
-  - OpenVPNAdapter (0.7.0):
-    - OpenVPNAdapter/ASIO (= 0.7.0)
-    - OpenVPNAdapter/LZ4 (= 0.7.0)
-    - OpenVPNAdapter/mbedTLS (= 0.7.0)
-    - OpenVPNAdapter/OpenVPN3 (= 0.7.0)
-    - OpenVPNAdapter/OpenVPNAdapter (= 0.7.0)
-    - OpenVPNAdapter/OpenVPNClient (= 0.7.0)
-  - OpenVPNAdapter/ASIO (0.7.0)
-  - OpenVPNAdapter/LZ4 (0.7.0)
-  - OpenVPNAdapter/mbedTLS (0.7.0)
-  - OpenVPNAdapter/OpenVPN3 (0.7.0)
-  - OpenVPNAdapter/OpenVPNAdapter (0.7.0)
-  - OpenVPNAdapter/OpenVPNClient (0.7.0)
+  - OpenVPNAdapter (0.8.0):
+    - OpenVPNAdapter/ASIO (= 0.8.0)
+    - OpenVPNAdapter/LZ4 (= 0.8.0)
+    - OpenVPNAdapter/mbedTLS (= 0.8.0)
+    - OpenVPNAdapter/OpenVPN3 (= 0.8.0)
+    - OpenVPNAdapter/OpenVPNAdapter (= 0.8.0)
+    - OpenVPNAdapter/OpenVPNClient (= 0.8.0)
+  - OpenVPNAdapter/ASIO (0.8.0)
+  - OpenVPNAdapter/LZ4 (0.8.0)
+  - OpenVPNAdapter/mbedTLS (0.8.0)
+  - OpenVPNAdapter/OpenVPN3 (0.8.0)
+  - OpenVPNAdapter/OpenVPNAdapter (0.8.0)
+  - OpenVPNAdapter/OpenVPNClient (0.8.0)
+  - path_provider_foundation (0.0.1):
+    - Flutter
+    - FlutterMacOS
 
 DEPENDENCIES:
   - Flutter (from `Flutter`)
+  - flutter_facebook_auth (from `.symlinks/plugins/flutter_facebook_auth/ios`)
+  - flutter_secure_storage (from `.symlinks/plugins/flutter_secure_storage/ios`)
+  - google_sign_in_ios (from `.symlinks/plugins/google_sign_in_ios/darwin`)
   - openvpn_flutter (from `.symlinks/plugins/openvpn_flutter/ios`)
-  - OpenVPNAdapter (from `https://github.com/ss-abramchuk/OpenVPNAdapter.git`, tag `0.7.0`)
+  - OpenVPNAdapter (from `https://github.com/ss-abramchuk/OpenVPNAdapter.git`, tag `0.8.0`)
+  - path_provider_foundation (from `.symlinks/plugins/path_provider_foundation/darwin`)
+
+SPEC REPOS:
+  trunk:
+    - AppAuth
+    - FBAEMKit
+    - FBSDKCoreKit
+    - FBSDKCoreKit_Basics
+    - FBSDKLoginKit
+    - GoogleSignIn
+    - GTMAppAuth
+    - GTMSessionFetcher
 
 EXTERNAL SOURCES:
   Flutter:
     :path: Flutter
+  flutter_facebook_auth:
+    :path: ".symlinks/plugins/flutter_facebook_auth/ios"
+  flutter_secure_storage:
+    :path: ".symlinks/plugins/flutter_secure_storage/ios"
+  google_sign_in_ios:
+    :path: ".symlinks/plugins/google_sign_in_ios/darwin"
   openvpn_flutter:
     :path: ".symlinks/plugins/openvpn_flutter/ios"
   OpenVPNAdapter:
     :git: https://github.com/ss-abramchuk/OpenVPNAdapter.git
-    :tag: 0.7.0
+    :tag: 0.8.0
+  path_provider_foundation:
+    :path: ".symlinks/plugins/path_provider_foundation/darwin"
 
 CHECKOUT OPTIONS:
   OpenVPNAdapter:
     :git: https://github.com/ss-abramchuk/OpenVPNAdapter.git
-    :tag: 0.7.0
+    :tag: 0.8.0
 
 SPEC CHECKSUMS:
-  Flutter: 50d75fe2f02b26cc09d224853bb45737f8b3214a
+  AppAuth: d4f13a8fe0baf391b2108511793e4b479691fb73
+  FBAEMKit: cb719c53575a3be86ea873279f30d6a2c4e15881
+  FBSDKCoreKit: ecdb980a24633ccb012700299ceb16d0235e14d2
+  FBSDKCoreKit_Basics: 045101c4a9ef10c845347424d73a29aae02c3e43
+  FBSDKLoginKit: 69eb59b2f839aba635616df6e422acd0ca88030a
+  Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
+  flutter_facebook_auth: 48be46091bd1a5cc5a66055f1228a9d99a28bfaa
+  flutter_secure_storage: d33dac7ae2ea08509be337e775f6b59f1ff45f12
+  google_sign_in_ios: 07375bfbf2620bc93a602c0e27160d6afc6ead38
+  GoogleSignIn: d4281ab6cf21542b1cfaff85c191f230b399d2db
+  GTMAppAuth: f69bd07d68cd3b766125f7e072c45d7340dea0de
+  GTMSessionFetcher: 5aea5ba6bd522a239e236100971f10cb71b96ab6
   openvpn_flutter: 35f2b149956e0be8d97c2af221321a495bcd92fa
-  OpenVPNAdapter: 173fcc4c11a3a8a83ae8d250c079cdc5b9fb8ff1
+  OpenVPNAdapter: 1d945f4528073ff641d4ed90d98e28f2b1c86d05
+  path_provider_foundation: 2b6b4c569c0fb62ec74538f866245ac84301af46
 
-PODFILE CHECKSUM: 2da1a35c0d55987349665f85a190a76dad3ea298
+PODFILE CHECKSUM: b87164e10023adc8a18da5596b164ddf8a70d049
 
-COCOAPODS: 1.11.3
+COCOAPODS: 1.16.2
