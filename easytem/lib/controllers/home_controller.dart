@@ -21,10 +21,8 @@ class HomeController extends GetxController {
     }
 
     if (vpnState.value == VpnEngine.vpnDisconnected) {
-
       //data = const Base64Decoder().convert(vpn.value.openVPNConfigDataBase64);
       //config = const Utf8Decoder().convert(data);
-
       final vpnConfig = VpnConfig(
           country: vpn.value.countryLong,
           username: vpn.value.username,
@@ -33,7 +31,6 @@ class HomeController extends GetxController {
 
       locationPainter.update(true);
       await VpnEngine.startVpn(vpnConfig);
-
     } else {
       locationPainter.update(false);
       await VpnEngine.stopVpn();
@@ -69,17 +66,15 @@ class HomeController extends GetxController {
   }
 }
 
-
 class LocationPainter extends CustomPainter {
-
   final List<double> brasil = [0.33, 0.53];
   final notifier = ValueNotifier<bool>(false);
   bool isConnected;
 
-  LocationPainter({this.isConnected = false}) : super(repaint: ValueNotifier<bool>(false));
+  LocationPainter({this.isConnected = false})
+      : super(repaint: ValueNotifier<bool>(false));
 
-  void update(bool isConnected)
-  {
+  void update(bool isConnected) {
     this.isConnected = isConnected;
     notifier.value = !notifier.value;
   }
@@ -87,7 +82,9 @@ class LocationPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     final Paint paint = Paint()
-      ..color = isConnected ? Colors.lightGreenAccent : const Color.fromARGB(255, 53, 82, 98)
+      ..color = isConnected
+          ? Colors.lightGreenAccent
+          : const Color.fromARGB(255, 53, 82, 98)
       ..style = PaintingStyle.fill;
 
     // Adjust these coordinates based on your desired location
@@ -101,8 +98,7 @@ class LocationPainter extends CustomPainter {
   }
 
   @override
-  bool shouldRepaint(covariant LocationPainter oldDelegate)
-  {
+  bool shouldRepaint(covariant LocationPainter oldDelegate) {
     return oldDelegate.isConnected != isConnected;
   }
 }

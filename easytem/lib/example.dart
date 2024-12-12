@@ -24,7 +24,6 @@ class _MyAppState extends State<MyApp> {
   bool _granted = true;
   @override
   void initState() {
-
     engine = OpenVPN(
       onVpnStatusChanged: (data) {
         setState(() {
@@ -39,9 +38,8 @@ class _MyAppState extends State<MyApp> {
     );
 
     engine.initialize(
-      groupIdentifier: "group.com.laskarmedia.vpn",
-      providerBundleIdentifier:
-          "id.laskarmedia.easytem.VPNExtension",
+      groupIdentifier: "E26GU732TG.id.laskarmedia.easytem",
+      providerBundleIdentifier: "id.laskarmedia.easytem.VPNExtension",
       localizedDescription: "VPN by Nizwar",
       lastStage: (stage) {
         setState(() {
@@ -58,14 +56,13 @@ class _MyAppState extends State<MyApp> {
   }
 
   Future<void> initPlatformState() async {
-
     String config = "";
 
-    config = await rootBundle.loadString('assets/vpn/Italy.ovpn');
+    config = await rootBundle.loadString('assets/vpn/prod.ovpn');
 
     engine.connect(
       config,
-      "Italy",
+      "Brasil",
       username: defaultVpnUsername,
       password: defaultVpnPassword,
       //certIsRequired: true,
@@ -117,8 +114,8 @@ class _MyAppState extends State<MyApp> {
   }
 }
 
-const String defaultVpnUsername = "freeopenvpn";
-const String defaultVpnPassword = "660336267";
+const String defaultVpnUsername = "vpnuser";
+const String defaultVpnPassword = "vpnuser";
 
 //"103795854"/Germany
 //"670841355"/Turkey

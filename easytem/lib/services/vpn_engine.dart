@@ -5,7 +5,7 @@ import 'package:openvpn_flutter/openvpn_flutter.dart';
 
 class VpnEngine {
   static late OpenVPN engine;
-  
+
   // Singleton instance
   static final VpnEngine _instance = VpnEngine._internal();
   factory VpnEngine() => _instance;
@@ -22,8 +22,8 @@ class VpnEngine {
     );
 
     await engine.initialize(
-      groupIdentifier: "easytem.2N5.vpn",
-      providerBundleIdentifier: "easytem.2N5.VPNExtension",
+      groupIdentifier: "E26GU732TG.id.laskarmedia.easytem",
+      providerBundleIdentifier: "id.laskarmedia.easytem.VPNExtension",
       localizedDescription: "VPN by EasyTEM",
       lastStage: (stage) => _stageController.add(stage.name),
       lastStatus: (status) => _statusController.add(status),
@@ -40,7 +40,6 @@ class VpnEngine {
 
   // Connect method
   static Future<void> startVpn(VpnConfig config) async {
-
     await engine.connect(
       config.config,
       config.country,

@@ -46,10 +46,20 @@ class APIs {
     final List<Vpn> vpnList = [];
 
     String testOvpnScript = await rootBundle.loadString('assets/vpn/dev.ovpn');
-    vpnList.add(Vpn(countryLong: 'Korea', countryShort: 'kr', username: "vpnuser", password: "vpnuser", openVPNConfigDataBase64: testOvpnScript));
+    vpnList.add(Vpn(
+        countryLong: 'Korea',
+        countryShort: 'kr',
+        username: "vpnuser",
+        password: "vpnuser",
+        openVPNConfigDataBase64: testOvpnScript));
 
     String prodOvpnScript = await rootBundle.loadString('assets/vpn/prod.ovpn');
-    vpnList.add(Vpn(countryLong: 'Brazil', countryShort: 'br', username: "vpnuser", password: "vpnuser", openVPNConfigDataBase64: prodOvpnScript));
+    vpnList.add(Vpn(
+        countryLong: 'Brazil',
+        countryShort: 'br',
+        username: "vpnuser",
+        password: "vpnuser",
+        openVPNConfigDataBase64: prodOvpnScript));
 
     return vpnList;
   }
